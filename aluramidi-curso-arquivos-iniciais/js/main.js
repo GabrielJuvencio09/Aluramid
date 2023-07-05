@@ -1,10 +1,17 @@
-
+ 
 const listadeteclas = document.querySelectorAll('.tecla')
 
 
 
-function tocasom (idtagaudio){
-    document.querySelector(idtagaudio).play()
+function tocasom (seletorAudio){
+    const elemento = document.querySelector(seletorAudio);
+
+    if(elemento != null && elemento.localName === 'audio' ){
+        elemento.play();
+    }  else{
+        alert('elemento nao encotrado')
+    }
+
 }
 
 
